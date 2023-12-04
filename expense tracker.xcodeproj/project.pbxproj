@@ -14,6 +14,8 @@
 		3646A6472B18405800078A7F /* expense_trackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3646A6462B18405800078A7F /* expense_trackerTests.swift */; };
 		3646A6512B18405800078A7F /* expense_trackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3646A6502B18405800078A7F /* expense_trackerUITests.swift */; };
 		3646A6532B18405800078A7F /* expense_trackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3646A6522B18405800078A7F /* expense_trackerUITestsLaunchTests.swift */; };
+		3650ED622B18863F006BB036 /* CurrencyField in Frameworks */ = {isa = PBXBuildFile; productRef = 3650ED612B18863F006BB036 /* CurrencyField */; };
+		368CA62B2B1975DD0047D19C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368CA62A2B1975DD0047D19C /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,9 @@
 		3646A64C2B18405800078A7F /* expense trackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "expense trackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3646A6502B18405800078A7F /* expense_trackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = expense_trackerUITests.swift; sourceTree = "<group>"; };
 		3646A6522B18405800078A7F /* expense_trackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = expense_trackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		368CA62A2B1975DD0047D19C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		368CA62C2B197AF60047D19C /* expense tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "expense tracker.entitlements"; sourceTree = "<group>"; };
+		368CA62D2B197B670047D19C /* expense-tracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "expense-tracker-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3650ED622B18863F006BB036 /* CurrencyField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +100,9 @@
 		3646A6342B18405600078A7F /* expense tracker */ = {
 			isa = PBXGroup;
 			children = (
+				368CA62D2B197B670047D19C /* expense-tracker-Info.plist */,
+				368CA62C2B197AF60047D19C /* expense tracker.entitlements */,
+				368CA62A2B1975DD0047D19C /* ImagePicker.swift */,
 				3646A6352B18405600078A7F /* expense_trackerApp.swift */,
 				3646A6372B18405600078A7F /* ContentView.swift */,
 				3646A6392B18405700078A7F /* Assets.xcassets */,
@@ -143,6 +152,9 @@
 			dependencies = (
 			);
 			name = "expense tracker";
+			packageProductDependencies = (
+				3650ED612B18863F006BB036 /* CurrencyField */,
+			);
 			productName = "expense tracker";
 			productReference = 3646A6322B18405600078A7F /* expense tracker.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +227,9 @@
 				Base,
 			);
 			mainGroup = 3646A6292B18405600078A7F;
+			packageReferences = (
+				3650ED602B18863F006BB036 /* XCRemoteSwiftPackageReference "swiftui-currency-field" */,
+			);
 			productRefGroup = 3646A6332B18405600078A7F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				368CA62B2B1975DD0047D19C /* ImagePicker.swift in Sources */,
 				3646A6382B18405600078A7F /* ContentView.swift in Sources */,
 				3646A6362B18405600078A7F /* expense_trackerApp.swift in Sources */,
 			);
@@ -419,17 +435,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = "expense tracker/expense tracker.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"expense tracker/Preview Content\"";
 				DEVELOPMENT_TEAM = MUR6UL7Y3V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "expense-tracker-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,6 +457,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.gianebao.expense-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -448,17 +469,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = "expense tracker/expense tracker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"expense tracker/Preview Content\"";
 				DEVELOPMENT_TEAM = MUR6UL7Y3V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "expense-tracker-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -588,6 +612,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3650ED602B18863F006BB036 /* XCRemoteSwiftPackageReference "swiftui-currency-field" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jtrinc/swiftui-currency-field.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3650ED612B18863F006BB036 /* CurrencyField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3650ED602B18863F006BB036 /* XCRemoteSwiftPackageReference "swiftui-currency-field" */;
+			productName = CurrencyField;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3646A62A2B18405600078A7F /* Project object */;
 }
